@@ -13302,8 +13302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bd5eb046e38b64180fa1353f13ea6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   scoreText: {fileID: 22414983}
+  spriteRenderer: {fileID: 1381656554}
+  Lazarus: {fileID: 21300000, guid: ab0229953e329354a85612b567d96eac, type: 3}
+  Bat: {fileID: 21300000, guid: fdc0f087cea04b3488d4ccae75d1d561, type: 3}
   ground:
     serializedVersion: 2
     m_Bits: 512
