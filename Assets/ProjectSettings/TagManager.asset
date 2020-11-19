@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pickups
+  - Ground
+  - Wall
+  - Enemy
+  - Echo
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Wall
+  - Ground
+  - Echo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3280665749
+    locked: 0
+  - name: Player
+    uniqueID: 1762973341
+    locked: 0
+  - name: Pickups
+    uniqueID: 3263664421
+    locked: 0
+  - name: Echo
+    uniqueID: 3843574731
+    locked: 0
