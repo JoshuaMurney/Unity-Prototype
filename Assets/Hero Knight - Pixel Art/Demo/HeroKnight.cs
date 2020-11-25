@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class HeroKnight : MonoBehaviour {
@@ -8,6 +9,7 @@ public class HeroKnight : MonoBehaviour {
     [SerializeField] float      m_rollForce = 6.0f;
     [SerializeField] bool       m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
+    public Text scoreText;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -20,6 +22,7 @@ public class HeroKnight : MonoBehaviour {
     private bool                m_rolling = false;
     private int                 m_facingDirection = 1;
     private int                 m_currentAttack = 0;
+    private int                 score;
     private float               m_timeSinceAttack = 0.0f;
     private float               m_delayToIdle = 0.0f;
 
@@ -34,6 +37,8 @@ public class HeroKnight : MonoBehaviour {
         m_wallSensorR2 = transform.Find("WallSensor_R2").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL1 = transform.Find("WallSensor_L1").GetComponent<Sensor_HeroKnight>();
         m_wallSensorL2 = transform.Find("WallSensor_L2").GetComponent<Sensor_HeroKnight>();
+        score = 0;
+        scoreText.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
@@ -158,6 +163,16 @@ public class HeroKnight : MonoBehaviour {
             m_delayToIdle -= Time.deltaTime;
                 if(m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.gameObject.CompareTag("Pickups"))
+        {
+            c.gameObject.SetActive(false);
+            score += 100;
+            scoreText.text = "Score: " + score.ToString();
         }
     }
 
